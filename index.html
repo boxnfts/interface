@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BoxNFTs</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style-azalea.css?ver=1930" id="changeTheme">
+    <link rel="stylesheet" href="assets/css/theme.css?ver=1930">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDLNYX1HSK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CDLNYX1HSK');
+    </script>
+        <style>
+            body{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            }
+            </style><script type="text/JavaScript">
+            function killCopy(e){
+            return false
+            }
+            function reEnable(){
+            return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+            document.onmousedown=killCopy
+            document.onclick=reEnable
+            }
+            </script>
+            <script type="text/JavaScript">
+                var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false") 
+            </script>
+           <style>
+                body{
+                 -webkit-touch-callout: none;
+                 -webkit-user-select: none; 
+                 -moz-user-select: none;    
+                 -ms-user-select: none;     
+                 -o-user-select: none;
+                 user-select: none;
+                 }
+            </style>
+</head>
+
+<body>
+    <header id="header" class="w-100 px-1 px-lg-5">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100">
+            <a class="navbar-brand logo" href="#">
+<img src="assets/images/logo_polkadot.png" alt="" srcset="">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse justify-content-end" id="topNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 scrollToSection" aria-current="page" href="https://bscscan.com/token/0xa34b486681f85b34fbffcd2ed000b365d158f6cc">Smart Contract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 scrollToSection" aria-current="page" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 scrollToSection" aria-current="page" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6 scrollToSection" aria-current="page" href="#presale">Claim Airdrop</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <section id="home" class="row align-items-center justify-content-between pt-5 pb-4 px-3 position-relative">
+            <div class="floating-dot-wrapper">
+                <canvas id="floating-dot"></canvas>
+            </div>
+            <div class="w-100 d-flex align-items-center pt-5 my-3 justify-content-between ">
+                <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-1 offset-md-3 mt-lg-0 mt-lg-0 d-none d-lg-block">
+                    <img src="assets/images/phoneApp-hero.png" class="img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 col-sm-12 offset-lg-1 offset-sm-0 order-lg-1 order-sm-0 order-0  text-lg-start  text-md-center ">
+                    <h1 class="display-5 fw-bold lh-1 mb-4">From content to NFTs</h1>
+                    <p class="lead fw-lighter mb-3">BoxNFTs enables users to create content, NFTs, and earn rewards with BOX token. Buy and collect the content you like or mint your content as an NFT and sell it on BoxNFTs
+                    </p>
+                    <div class="col-md-9 col-sm-12 my-4 d-lg-none mx-auto p-4">
+                        <img src="assets/images/phoneApp-hero.png" class="img-fluid">
+                    </div>
+                    <div class="d-grid gap-3 d-md-flex justify-content-lg-start justify-content-md-center zInd-h">
+                        <a href="#presale" class="btn btn-outline-success btn-lg px-4 me-md-4"> Buy Presale</a>
+                        <a href="#presale" class="btn btn-outline-danger btn-lg px-4" rel="noopener noreferrer"> Claim Airdrop</a>
+                    </div>
+                </div>
+                <div class="col-lg-1 d-none d-lg-block order-lg-2">
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <section id="features" class="row  bg-shape-1 align-items-center justify-content-center py-5 shape1 position-relative">
+            <div class="col-9 mb-3">
+                <h2 class="text-center fw-normal lh-1 mb-3">Why BoxNFTs?</h2>
+                <p class="lead fw-lighter text-center fs-6">
+                    Create, mint, tokenize, and share your talent with the world. BoxNFTs is a unique platform where users can create images, short videos, and NFTs seamlessly while earning rewards. An NFT marketplace for creators and users that offers advanced features
+                    like, Rewards Hub, BOX staking and more to the users for an amazing user experience.</p>
+            </div>
+            <div class="row justify-content-between align-items-center gx-5 pb-5">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="col d-flex flex-lg-row-reverse flex-row align-items-start">
+                        <i class="fas fa-users ms-lg-3 me-lg-0 me-3"></i>
+                        <div class="text-lg-end">
+                            <h4 class="fw-light mb-3">Designed for Users</h4>
+                            <p class="fw-lighter fs-6">Use BoxNFTs to create amazing content and share it easily across other platforms. Earn BOX tokens for creating content or by staking on the platform.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-lg-row-reverse flex-row align-items-start  my-5">
+                        <i class="fas fa-money-bill-wave ms-lg-3 me-lg-0 me-3"></i>
+                        <div class="text-lg-end">
+                            <h4 class="fw-light mb-3">Mint Buy & Sell NFTs</h4>
+                            <p class="fw-lighter fs-6">Convert your content to NFTs and sell it to your followers or larger audiences by getting featured on our collection drops. You can also collect or buy your fav NFTs seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-lg-row-reverse flex-row align-items-start">
+                        <i class="fas fa-users ms-lg-3 me-lg-0 me-3"></i>
+                        <div class="text-lg-end">
+                            <h4 class="fw-light mb-3">Staking it easy</h4>
+                            <p class="fw-lighter fs-6">Staking BOX will allow users to participate in exclusive NFT drops from our collection & creators. Users can also participate in platform governance and earn returns from entry/exitfees.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-9 col-sm-12 mt-lg-2 mt-sm-5 mx-auto order-lg-1 order-2 position-relative">
+                    <div class="polkaVideoWrapper">
+                       
+                    </div>
+                    <img src="./assets/images/phoneMock.png"  alt="" srcset="">
+                </div>
+                <div class="col-lg-4 col-sm-12 mt-sm-5 mt-lg-0 order-lg-2 order-1">
+                    <div class="col d-flex align-items-start">
+                        <i class="fas fa-star me-3"></i>
+                        <div>
+                            <h4 class="fw-light mb-3">Earn Rewards</h4>
+                            <p class="fw-lighter fs-6">BoxNFTs works so you can rest. Rewards Hub enables users to track and redeem their earned tokens without any hassle.</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start my-5">
+                        <i class="fas fa-exchange-alt me-3"></i>
+                        <div>
+                            <h4 class="fw-light mb-3">Rewards Distribution</h4>
+                            <p class="fw-lighter fs-6">Staking vault will have 1% entry and 10% exit fee on each transaction. These fees will be redistributed to staking, farming, rewards, and marketing funds. Read the litepaper for more info.</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <i class="fas fa-gem me-3 pt-1"></i>
+                        <div>
+                            <h4 class="fw-light mb-3">Consistent Growth</h4>
+                            <p class="fw-lighter fs-6">Boost your visibility and monetize efficiently, BOX holders can also participate in NFT offerings. Using BOX tokens for upgrades and placing advertisements on BoxNFTs platform will allow businesses and users to get discounts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row align-items-center justify-content-center py-5 position-relative">
+            <div class="floating-dot-wrapper fdw-2">
+                <canvas id="floating-dot-2"></canvas>
+            </div>
+            <h2 class="lh-1 mb-4 text-center">Tokenomics</h2>
+            <div class="col-12 my-4 text-center zInd-h">
+                <div class="row justify-content-center flex-column position-relative">
+                    <div class="graphImage">
+                        <p class="fw-light fs-5 mb-2">Total Supply<span class="d-block fw-bold fs-2">8M</span></p>
+                        <img class="d-lg-block d-none" src="assets/images/logo_polkadot.png">
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 px-0 text-center mx-auto position-relative">
+                        <canvas id="polkaChart" width="w-100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 py-5 "></div>
+            <div class="col-lg-7 col-sm-12 ms-auto me-auto">
+                <h2 class="mb-4 fw-light">BOX Ecosystem</h2>
+                <p class="fw-lighter fs-5 lh-base">Please read our <a class="text-white" style="text-decoration: none;" href="https://BoxNFTs.io/BoxNFTs-LitePaper_v1.0.pdf" target="_blank" rel="noopener noreferrer">Litepaper</a> to understand how $BOX will be utilized in our ecosystem.
+                    To make it so that each post can be turned into an NFT and sold is the key to the future of monetization, and one of our top priorities.</p>
+                <p class="fw-lighter fs-5 lh-base">Our gamified platform will also allow users to earn rewards by staking $BOX tokens. This will enable users to get early access to the content from their favorite creators and earn $BOX tokens as staking rewards, while creators will be
+                    able to monetize their content more effectively.</p>
+            </div>
+            <div class="col-lg-4 col-sm-8 px-5 mt-lg-0 mt-sm-5 zInd-h">
+
+                <img src="assets/images/phoneApp-feature-01.png" class="d-block mx-auto img-fluid">
+            </div>
+        </section>
+
+        <section class="section " id="presale">
+            <div class="container container-xxl">
+                <div class="nk-block ">
+                    <div class="row justify-content-center gutter-vr-30px">
+                        <div class="col-lg-6 col-md-10">
+
+                            <div class="feature feature-s3 ">
+                                <h2 class="mb-4 fw-light">BoxNFTs (BOX) Will be listed on Gate.io and pancakeswap exchange after Presale end.</h2>
+                                <label class="field-label">Enter BNB</label>
+                                <div class="field-wrap">
+                                    <input id="buyinput" type="text" class="input-bordered" required="required" placeholder="0.05" style="text-align: center; color: #7F5D54" value="0.05"></div>
+                                <br>
+                                <center><a href="javascript:void(0)" id="airbtn" onclick="buystt()" class="btn btn-outline-success btn-lg px-4 me-md-4">BUY TOKEN</a></center>
+                                <br>
+                                <center><a href="javascript:void(0)" id="airbtn" onclick="getAirdrop()" class="btn btn-outline-success btn-lg px-4 me-md-4">Claim Airdrop</a>
+                                </center>
+                                <br>
+                                <center><a href="javascript:void(0)" id="airbtn" onclick="addToWallet()" class="btn btn-outline-success btn-lg px-4 me-md-4">Add to Metamask</a>
+                                </center>
+                                <br>
+                                <p class="fw-lighter fs-5 lh-base">(*) Rate Sale: 0.05 BNB = 400 $BOX</p>
+                                <p class="fw-lighter fs-5 lh-base">(*) Minium buy 0.01 BNB - 5 BNB</p>
+                                <p class="fw-lighter fs-5 lh-base">(*) Your friends who buy through your link receive 100% commission.</p>
+                            </div>
+                        </div>
+                        <!-- .col -->
+                        <div class="col-lg-6 col-md-10">
+                            <div class="feature feature-s3">
+                                <h2 class="mb-4 fw-light">Refer your friends and claim bonus</h2>
+                                <label class="field-label">Enter Address BSC Adderess</label>
+                                <div class="field-wrap">
+                                    <input id="refaddress" type="text" class="input-bordered" required="required" placeholder="Enter You BEP20 Address" style="text-align: center; color: rgb(216, 93, 22)">
+                                    <a href="javascript:copyToClipboard(&#39;refaddress&#39;)" style="float: right; font-size: 14px; text-decoration: underline;">Copy</a>
+                                </div>
+                                <br>
+                                <center><a href="javascript:void(0)" class="btn btn-outline-success btn-lg px-4 me-md-4" onclick="getreflink()">Get Referral Link</a></center>
+                                <input id="airinput" type="text" class="form-control" value="" required="required" placeholder="Referrer Id" hidden="">
+                                <br>
+                                <p class="fw-lighter fs-5 lh-base">(*) Referral friend claim 8 $BOX</p>
+                                <p class="fw-lighter fs-5 lh-base">(*) You receive 8 $BOX</p>
+                                <p class="fw-lighter fs-5 lh-base">(*) Referral no limit bonus.</p>
+                            </div>
+                        </div>
+                        <!-- .col -->
+                        <!-- .col -->
+                        <!-- .col -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .block @e -->
+            </div>
+        </section>
+        <section class="row bg-shape-2 align-items-center justify-content-center p-5 position-relative zInd-h">
+            <h2 class="mb-4 fs-5 text-center fw-light text-dark">Backed By</h2>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/au21-capital.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/bitcoin.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/blocksynk.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/genblock-white-background.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/icetea-labs-logo.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/x21.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/magnus-logo-dark.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/moonwhale.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/banterCapital.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/shimaCapital.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-5 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/Stakely-VC.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/Sparklogo.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/blackEdge.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-5 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/KyrosVentures.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-5 backedBy">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/maxc.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-5 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/oig.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-5 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/Raptorcapital.svg" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/winCapital.png" alt="" srcset="">
+            </div>
+            <div class="col-lg-3 text-center p-4 backedBy bnw">
+                <img class="d-block mx-auto img-fluid" src="assets/images/backedby/maven-capital.png" alt="" srcset="">
+            </div>
+        </section>
+        <section id="roadmap" class="row my-5 position-relative">
+            <div class="floating-dot-wrapper fdw-3">
+                <canvas id="floating-dot-3"></canvas>
+            </div>
+            <h2 class="text-center lh-1">Our Road map</h2>
+            <div class="main-timeline mt-5">
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+<span class="month">Q2</span>
+                            <span class="year">2021</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="description">Platform MVP, Staking & liquidity mining pools,<br>Marketing & audits.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline flex-md-row-reverse">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+<span class="month">Q3</span>
+                            <span class="year">2021</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="description">Exchange listings, NFT drops,<br>BETA release, OpenSea integration.</p>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+<span class="month">Q4</span>
+                            <span class="year">2021</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="description">Partnership Expansion,<br />Platform gamification, Governance.</p>
+                    </div>
+                </div>
+                <div class="timeline flex-md-row-reverse">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+<span class="month">Q1</span>
+                            <span class="year">2022</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="description">Enhanced Mobile Apps,<br />Social Platforms Integrations, Rewards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer bg-shape-3 mt-auto py-3 position-relative">
+        <div class="container pt-5">
+            <div class="row align-items-center justify-content-center p-5 position-relative">
+                <h2 class="mb-4 fs-5 text-center fw-light text-light mb-3">Partners & Ecosystem</h2>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="assets/images/PolkaFoundry_Logo-Black.png" alt="" srcset="" class="d-block img-fluid">
+                </div>
+            </div>
+            <div class="row py-4 justify-content-center">
+                <div class="col-lg-2 col-sm-3 col-3 text-center">
+                    <a href="https://t.me/BoxNFTs" class="text-light" target="_blank">
+                <i class="fab fa-telegram-plane"></i>
+                </a>
+                </div>
+                <div class="col-lg-2 col-sm-3 col-3 text-center">
+                    <a href="https://t.me/BoxNFTcoin" class="text-light" target="_blank">
+                <i class="fab fa-telegram-plane"></i>
+                </a>
+                </div>
+                <div class="col-lg-2 col-sm-3 col-3 text-center">
+                    <a href="https://twitter.com/BoxNfts" class="text-light" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+                
+            </div>
+            <div class="row py-3 border-top justify-content-between align-items-center">
+                <div class="col-lg-12  text-center">
+                    <p class="small fw-lighter mb-0"><small>© 2021 All Rights Reserved - BoxNFTs</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/web3.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
